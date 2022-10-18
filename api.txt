@@ -1,0 +1,38 @@
+http://localhost:8080/getBirdscans/1
+{
+    "id": 1,
+    "geoLocation": "25N,71W",
+    "scanDate": "2020-10-10",
+    "uniqueBirdId": "50554d6e-29bb-11e5-b345-feff819cdc9f",
+    "birdSpecies": "Common loon",
+    "birdtraits": [
+        "red eyes",
+        "swim and dive",
+        "webbed feet"
+    ]
+}
+
+http://localhost:8080/getBirdscans
+
+{
+    "id": 1,
+    "geoLocation": "25N,71W",
+    "scanDate": "2020-10-10",
+    "uniqueBirdId": "50554d6e-29bb-11e5-b345-feff819cdc9f",
+    "birdSpecies": "Common loon",
+    "birdtraits": [
+        "red eyes",
+        "swim and dive",
+        "webbed feet"
+    ]
+}
+
+http://localhost:8080/saveLocations
+
+{
+        "id": 1,
+        "geoLocation": "25N,71W",
+       "locationName":"Bermuda Triangle"
+}
+
+http://localhost:8080/getLocations
