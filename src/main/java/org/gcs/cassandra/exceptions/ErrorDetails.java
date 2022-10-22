@@ -1,23 +1,18 @@
 package org.gcs.cassandra.exceptions;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class ErrorDetails {
 	
 	private Date timestamp;
-	private String message;
 	private String details;
+	private String httpstatus;
+	
 	public Date getTimestamp() {
 		return timestamp;
 	}
 	public void setTimestamp(Date timestamp) {
 		this.timestamp = timestamp;
-	}
-	public String getMessage() {
-		return message;
-	}
-	public void setMessage(String message) {
-		this.message = message;
 	}
 	public String getDetails() {
 		return details;
@@ -25,11 +20,20 @@ public class ErrorDetails {
 	public void setDetails(String details) {
 		this.details = details;
 	}
-	public ErrorDetails(Date timestamp, String message, String details) {
+	public String getHttpstatus() {
+		return httpstatus;
+	}
+	public void setHttpstatus(String httpstatus) {
+		this.httpstatus = httpstatus;
+	}
+	@Override
+	public String toString() {
+		return "ErrorDetails [timestamp=" + timestamp + ", details=" + details + ", httpstatus=" + httpstatus + "]";
+	}
+	public ErrorDetails(Date timestamp, String details, String httpstatus) {
 		super();
 		this.timestamp = timestamp;
-		this.message = message;
 		this.details = details;
+		this.httpstatus = httpstatus;
 	}
-	
 }
