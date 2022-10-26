@@ -54,7 +54,7 @@ class ValidationFT {
         HttpResponse<String> postResponse = httpClient.send(postRequest, HttpResponse.BodyHandlers.ofString());
         HttpResponse<String> getResponse = httpClient.send(getRequest, HttpResponse.BodyHandlers.ofString());
 
-        assertEquals(200, postResponse.statusCode());
+        assertEquals(201, postResponse.statusCode());
         assertEquals(200, getResponse.statusCode());
         assertTrue(getResponse.body().contains("25N,71W"), "Response after saving a location should contain: '25N,71W'");
         assertTrue(getResponse.body().contains("Bermuda Triangle"), "Response after saving a location should contain: 'Bermuda Triangle'");
@@ -90,7 +90,7 @@ class ValidationFT {
         HttpResponse<String> postResponse = httpClient.send(postRequest, HttpResponse.BodyHandlers.ofString());
         HttpResponse<String> getResponse = httpClient.send(getRequest, HttpResponse.BodyHandlers.ofString());
 
-        assertEquals(200, postResponse.statusCode());
+        assertEquals(201, postResponse.statusCode());
         assertEquals(200, getResponse.statusCode());
         assertTrue(getResponse.body().contains("25N,71W"), "Response after saving a scan result should contain: '25N,71W'");
         assertTrue(getResponse.body().contains("2025-08-17"), "Response after saving a scan result should contain: '2025-08-17'");
